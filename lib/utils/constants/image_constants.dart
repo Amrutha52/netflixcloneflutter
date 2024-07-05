@@ -9,4 +9,5 @@ class imageConstants
   static const String USER3_PNG = "assets/images/user_3.png";
   static const String USER4_PNG = "assets/images/user_4.png";
   static const String ADD_PNG = "assets/images/add_png.png";
+  static const String NLOGO_PNG = "assets/images/n_logo.png";
 }
