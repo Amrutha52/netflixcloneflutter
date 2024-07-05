@@ -5,4 +5,5 @@ class colorConstants
   static Color mainBlack = Color(0xff000000);
   static Color mainwhite = Color(0xffffffff);
   static Color netflixRed = Color(0xffe50914);
+  static const Color green = Color(0xff008000);
 }

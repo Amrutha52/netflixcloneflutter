@@ -5,10 +5,15 @@ import 'package:netflixclone/utils/constants/color_constants.dart';
 import 'package:netflixclone/utils/constants/image_constants.dart';
 import 'package:netflixclone/view/home_screen/HomeScreen.dart';
 
-class UserNameScreen extends StatelessWidget
+class UserNameScreen extends StatefulWidget
 {
   const UserNameScreen({super.key});
 
+  @override
+  State<UserNameScreen> createState() => _UserNameScreenState();
+}
+
+class _UserNameScreenState extends State<UserNameScreen> {
   @override
   Widget build(BuildContext context)
   {
@@ -53,10 +58,13 @@ class UserNameScreen extends StatelessWidget
               {
                 return InkWell(
                   onTap: (){
-                    ScaffoldMessenger.of(context)
-                        .showSnackBar(SnackBar(
-                      backgroundColor: colorConstants.netflixRed,
-                        content: Text("Features not Unavailable")));
+                    DummyDB.usersList.add(
+                      {"imagePath": imageConstants.USER1_PNG, "userName": "astdfygh"},
+                    );
+                    setState(() {});
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                        backgroundColor: colorConstants.green,
+                        content: Text("Profile added successfully")));
                   },
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.end,
