@@ -1,6 +1,9 @@
 class imageConstants
 {
+  //Splash screen Images
   static const String LOGO_PNG = "assets/images/logos_netflix.png";
+
+  //User Screen Images
   static const String USER1_PNG = "assets/images/user_1.png";
   static const String USER2_PNG = "assets/images/user_2.png";
   static const String USER3_PNG = "assets/images/user_3.png";
