@@ -15,17 +15,97 @@ class _HomescreenState extends State<Homescreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: colorConstants.mainBlack,
-      body: SafeArea(
-          child: Container(
-            padding: EdgeInsets.symmetric(horizontal: 24,),
-            height: 415,
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    fit: BoxFit.cover,
-                    image: NetworkImage("https://images.pexels.com/photos/3342739/pexels-photo-3342739.jpeg?auto=compress&cs=tinysrgb&w=600"))),
-            child: Column(
+      body: Column(
+        children: [
+          _moviePosterSection(),
+          SizedBox(height: 11,),
+          _buildPlaySection(),
+          SizedBox(height: 40,),
+        ],
+      )
+    );
+  }
+
+  Widget _buildPlaySection()
+  {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Column(
               children: [
-                Row(
+                Icon(Icons.add, color: colorConstants.mainwhite,),
+                SizedBox(height: 5,),
+                Text("My List", style: TextStyle(
+                  color: colorConstants.mainwhite,
+                  fontSize: 14
+                ),
+                ),
+              ],
+            ),
+            SizedBox(width: 42,),
+            Container(
+              padding: EdgeInsets.symmetric(vertical: 7, horizontal: 15),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(6),
+                color: Color(0xffc4c4c4)
+              ),
+              child: Row(
+                children: [
+                  Icon(Icons.play_arrow, color: colorConstants.mainBlack, size: 40,),
+                  SizedBox(width: 5,),
+                  Text("Play", style: TextStyle(
+                      color: colorConstants.mainBlack,
+                      fontSize: 14,
+                    fontWeight: FontWeight.bold
+                  ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(width: 42,),
+            Column(
+              children: [
+                Icon(Icons.info_outline_rounded, color: colorConstants.mainwhite,),
+                SizedBox(height: 5,),
+                Text("Info", style: TextStyle(
+                    color: colorConstants.mainwhite,
+                    fontSize: 14
+                ),
+                ),
+              ],
+            ),
+          ],
+        );
+  }
+
+  Widget _moviePosterSection()
+  {
+    return Stack(
+      children: [
+        Container(
+          padding: EdgeInsets.symmetric(horizontal: 24,),
+          height: 415,
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: NetworkImage("https://images.pexels.com/photos/3342739/pexels-photo-3342739.jpeg?auto=compress&cs=tinysrgb&w=600"))),
+
+        ),
+        Container(
+          padding: EdgeInsets.symmetric(horizontal: 24),
+          height: 415,
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.bottomCenter,
+                  end: Alignment.center,
+                  colors: [colorConstants.mainBlack, Colors.transparent])
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 40),
+                child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Image.asset(imageConstants.NLOGO_PNG),
@@ -36,16 +116,23 @@ class _HomescreenState extends State<Homescreen> {
                     Text("My List", style: TextStyle(color: colorConstants.mainwhite, fontSize: 18),),
                   ],
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(Icons.add_alert, size: 20, color: Colors.white,),
-                    Text("data", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14),)
-                  ],
-                )
-              ],
-            ),
-          ),)
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(imageConstants.TOP10_PNG),
+                  SizedBox(width: 5,),
+                  Text("Nigeria Today",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 14),)
+                ],
+              )
+            ],
+          ),
+        ),
+      ],
     );
   }
 }
