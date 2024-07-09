@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:netflixclone/dummyDB.dart';
 import 'package:netflixclone/utils/constants/color_constants.dart';
 import 'package:netflixclone/utils/constants/image_constants.dart';
+import 'package:netflixclone/view/home_screen/widgets/movies_card_builder_widget.dart';
 
 class Homescreen extends StatefulWidget {
   const Homescreen({super.key});
@@ -15,13 +17,29 @@ class _HomescreenState extends State<Homescreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: colorConstants.mainBlack,
-      body: Column(
-        children: [
-          _moviePosterSection(),
-          SizedBox(height: 11,),
-          _buildPlaySection(),
-          SizedBox(height: 40,),
-        ],
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            _moviePosterSection(),
+            SizedBox(height: 11,),
+            _buildPlaySection(),
+            SizedBox(height: 40,),
+            MoviesCardBuilderWidget(isCircle: true, width: 102, title: "Previews", posterImages: DummyDB.moviePostersListd1,),
+           // SizedBox(height: 40,),
+            MoviesCardBuilderWidget(title: "",posterImages: DummyDB.moviePostersListd2,),
+           // SizedBox(height: 40,),
+            MoviesCardBuilderWidget(title: "",posterImages: DummyDB.moviePostersListd3,),
+           // SizedBox(height: 40,),
+            MoviesCardBuilderWidget(
+              height: 251,
+              width: 154,
+              title: "",
+              posterImages: DummyDB.moviePostersListd4,
+            )
+          ],
+        ),
       )
     );
   }
