@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:netflixclone/dummyDB.dart';
 import 'package:netflixclone/utils/constants/color_constants.dart';
 import 'package:netflixclone/utils/constants/image_constants.dart';
+import 'package:netflixclone/view/bottom_nav_screen/BottomNavScreen.dart';
 import 'package:netflixclone/view/home_screen/HomeScreen.dart';
 
 class UserNameScreen extends StatefulWidget
@@ -42,7 +43,7 @@ class _UserNameScreenState extends State<UserNameScreen> {
               {
                 return InkWell(
                   onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => Homescreen()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => BottomNavScreen()));
                   },
                   child: Column(
                     children: [
