@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:netflixclone/utils/constants/color_constants.dart';
+import 'package:netflixclone/view/comingsoon_screen/ComingSoonScreen.dart';
 import 'package:netflixclone/view/home_screen/HomeScreen.dart';
 import 'package:netflixclone/view/search_screen/SearchScreen.dart';
 
@@ -18,7 +19,7 @@ class _BottomNavScreenState extends State<BottomNavScreen>
   List<Widget> myScreens = [
     Homescreen(),
     SearchScreen(),
-    Container(color: Colors.green,),
+    ComingSoonScreen(),
     Container(color: Colors.blue,),
     Container(color: Colors.orange,)
   ];
