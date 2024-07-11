@@ -6,10 +6,10 @@ import '../../../utils/constants/color_constants.dart';
 class NewArrivalCard extends StatelessWidget
 {
   const NewArrivalCard({
-    super.key, required this.imageUrl,
+    super.key, required this.imageUrl, required this.newArrival, required this.date, required this.movieName,
   });
 
-  final String imageUrl;
+  final String imageUrl, newArrival, date, movieName;
 
   @override
   Widget build(BuildContext context)
@@ -32,16 +32,16 @@ class NewArrivalCard extends StatelessWidget
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("New Arrival",
+              Text(newArrival,
                 style: TextStyle(color: colorConstants.mainwhite, fontSize: 14),
               ),
-              Text("El Chapo",
+              Text(movieName,
                 style: TextStyle(
                     color: colorConstants.mainwhite.withOpacity(.83),
                     fontSize: 14
                 ),
               ),
-              Text("Nov 6",
+              Text(date,
                 style: TextStyle(
                     color: colorConstants.mainwhite.withOpacity(.47),
                     fontSize: 10

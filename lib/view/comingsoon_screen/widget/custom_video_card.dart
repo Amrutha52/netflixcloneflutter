@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:netflixclone/utils/constants/color_constants.dart';
 
 class CustomVideoCard extends StatelessWidget {
-  const CustomVideoCard({super.key, required this.imageUrl});
-  final String imageUrl;
+  const CustomVideoCard({super.key, required this.imageUrl, required this.date, required this.movieName, required this.movieDescription});
+  final String imageUrl, date, movieName, movieDescription;
 
   @override
   Widget build(BuildContext context) {
@@ -59,14 +59,14 @@ class CustomVideoCard extends StatelessWidget {
                 ],
               ),
               Text(
-                "Season 1 Coming December 14",
+                date,
                 style: TextStyle(
                     color: colorConstants.mainwhite.withOpacity(.83),
                     fontSize: 11),
               ),
               SizedBox(height: 12),
               Text(
-                "Castle & Castle",
+                movieName,
                 style: TextStyle(
                     color: colorConstants.mainwhite,
                     fontSize: 18,
@@ -74,7 +74,7 @@ class CustomVideoCard extends StatelessWidget {
               ),
               SizedBox(height: 12),
               Text(
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit quam dui, vivamus bibendum ut. A morbi mi tortor ut felis non accumsan accumsan quis. Massa,id ut ipsum aliquam  enim non posuere pulvinar diam.",
+                movieDescription,
                 textAlign: TextAlign.justify,
                 style: TextStyle(
                     color: colorConstants.mainwhite.withOpacity(.83),

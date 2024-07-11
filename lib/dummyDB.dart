@@ -143,9 +143,41 @@ class DummyDB
 
   ];
 
-  static const List<String> newArrivals = [
-    "https://i.pinimg.com/474x/5c/96/2d/5c962d5dc8dfaab1561878813c19445e.jpg",
-    "https://i.pinimg.com/474x/10/17/d6/1017d65e8ce5f87675b63e8667053e98.jpg",
-    "https://i.pinimg.com/474x/bc/fe/47/bcfe47b4b2fbcb1dd40cef44569d6d81.jpg",
+  static const List<Map<String, String>> newArrivals = [
+    {"imagePath" : "https://i.pinimg.com/474x/5c/96/2d/5c962d5dc8dfaab1561878813c19445e.jpg",
+     "newArrival" : "New Arrival",
+      "movieName" : "ElChapo",
+      "date" : "Nov 6"
+    },
+    {"imagePath" : "https://i.pinimg.com/474x/10/17/d6/1017d65e8ce5f87675b63e8667053e98.jpg",
+      "newArrival" : "New Arrival",
+      "movieName" : "NoteBook",
+      "date" : "July 20"
+    },
+    {"imagePath" : "https://i.pinimg.com/474x/bc/fe/47/bcfe47b4b2fbcb1dd40cef44569d6d81.jpg",
+      "newArrival" : "New Arrival",
+      "movieName" : "HarryPotter",
+      "date" : "March 1"
+    },
+
+  ];
+
+  static const List<Map<String, String>> customVideoCardD1 = [
+    {"imagePath" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOm-GkCfM7LZgG7MOxvu93NurG53JCkiGg1A&s",
+      "date": "Season 1 Coming December 14",
+      "movieName": "La La Land",
+      "movieDescription": "When Sebastian, a pianist, and Mia, an actress, follow their passion and achieve success in their respective fields, they find themselves torn between their love for each other and their careers."
+    },
+    {"imagePath" : "https://images.pexels.com/photos/10025211/pexels-photo-10025211.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "date": "Season 1 Coming October 1",
+      "movieName": "Harry Potter",
+      "movieDescription": "Harry Potter is a series of seven fantasy novels written by British author J. K. Rowling. The novels chronicle the lives of a young wizard, Harry Potter, and his friends, Hermione Granger and Ron Weasley, all of whom are students at Hogwarts School of Witchcraft and Wizardry."
+    },
+    {"imagePath" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS01CjCh0rNMZU-QHOIBGoHCWvZvUzcm7BiOQ&s",
+      "date": "Season 1 Coming January 23",
+      "movieName": "Godsila",
+      "movieDescription": "King Kong is transported out of his containment zone after Godzilla resurfaces and creates mayhem. Humans need his help to reach Hollow Earth and find a way to subdue the king of the monsters."
+    },
+
   ];
 }
