@@ -4,6 +4,7 @@ import 'package:netflixclone/dummyDB.dart';
 import 'package:netflixclone/utils/constants/color_constants.dart';
 import 'package:netflixclone/utils/constants/image_constants.dart';
 import 'package:netflixclone/view/bottom_nav_screen/BottomNavScreen.dart';
+import 'package:netflixclone/view/global_widgets/UserNameCard.dart';
 import 'package:netflixclone/view/home_screen/HomeScreen.dart';
 
 class UserNameScreen extends StatefulWidget
@@ -41,19 +42,12 @@ class _UserNameScreenState extends State<UserNameScreen> {
             itemBuilder: (context, index) {
             if(index < DummyDB.usersList.length)
               {
-                return InkWell(
-                  onTap: (){
+                return UserNameCard(
+                  onCardPressed: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context) => BottomNavScreen()));
                   },
-                  child: Column(
-                    children: [
-                      Image.asset(DummyDB.usersList[index]["imagePath"]!),
-                      SizedBox(height: 5,),
-                      Text(DummyDB.usersList[index]["userName"]!,
-                        style: TextStyle(fontSize: 13.25, color: colorConstants.mainwhite),)
-                    ],
-                  ),
-                );
+                  imagePath:DummyDB.usersList[index]["imagePath"].toString() ,
+                userName: DummyDB.usersList[index]["userName"].toString(),);
               }
             else
               {

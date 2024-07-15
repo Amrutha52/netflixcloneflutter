@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:netflixclone/utils/constants/color_constants.dart';
 import 'package:netflixclone/view/comingsoon_screen/ComingSoonScreen.dart';
 import 'package:netflixclone/view/home_screen/HomeScreen.dart';
+import 'package:netflixclone/view/more_screen/MoreScreen.dart';
 import 'package:netflixclone/view/search_screen/SearchScreen.dart';
 
 class BottomNavScreen extends StatefulWidget
@@ -21,7 +22,7 @@ class _BottomNavScreenState extends State<BottomNavScreen>
     SearchScreen(),
     ComingSoonScreen(),
     Container(color: Colors.blue,),
-    Container(color: Colors.orange,)
+    MoreScreen()
   ];
   @override
   Widget build(BuildContext context) {
