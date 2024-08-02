@@ -65,22 +65,66 @@ class DownloadsScreen extends StatelessWidget
                   fontWeight: FontWeight.bold,
                 ),),
             ),
-            ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  //minimumSize: Size(300, 50),
-                  backgroundColor: Colors.blueAccent,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  //elevation: 10,
+            SizedBox(height: 20,),
+            Center(
+              child: Container(
+                width: 200,
+                height: 200,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
                 ),
-                onPressed: (){
+                child: Padding(
+                  padding: EdgeInsets.all(2), // border width
+                  child: Container( // or ClipRRect if you need to clip the content
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: colorConstants.grey, // inner circle color
+                    ),
+                    child: Container(), // inner content
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(height: 20,),
+            Center(
+              child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    minimumSize: Size(300, 50),
+                    backgroundColor: Colors.blueAccent,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(1),
+                    ),
+                    //elevation: 10,
+                  ),
+                  onPressed: (){
 
-                },
-                child: Text("Find videos to download", style: TextStyle(
-                  color: colorConstants.mainwhite,
-                  fontSize: 16,
-                ),)
+                  },
+                  child: Text("Set Up", style: TextStyle(
+                    color: colorConstants.mainwhite,
+                    fontSize: 16,
+                  ),)
+              ),
+            ),
+            SizedBox(height: 40,),
+            Center(
+              child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    minimumSize: Size(60, 30),
+                    backgroundColor: colorConstants.greyShade1,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(1),
+                    ),
+                    //elevation: 10,
+                  ),
+                  onPressed: (){
+
+                  },
+                  child: Text("Find More to Download", style: TextStyle(
+                    color: colorConstants.mainwhite,
+                    fontSize: 14,
+                    //fontWeight: FontWeight.bold
+                  ),)
+              ),
             ),
           ],
         )
