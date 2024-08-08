@@ -47,7 +47,8 @@ class _UserNameScreenState extends State<UserNameScreen> {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => BottomNavScreen()));
                   },
                   imagePath:DummyDB.usersList[index]["imagePath"].toString() ,
-                userName: DummyDB.usersList[index]["userName"].toString(),);
+                userName: DummyDB.usersList[index]["userName"].toString(),
+                );
               }
             else
               {
